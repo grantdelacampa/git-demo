@@ -65,3 +65,13 @@ INSERT INTO users (username, password, enabled) VALUES ('editor', '$2a$10$87FxFU
 INSERT INTO users (username, password, enabled) VALUES ('creatoreditor', '$2a$10$IWymjeWUGO2BDXjj64SO/.4EM9BeLkqS6KKTu2qAH4IKL2gFsPBve', '1');  -- user 4
 INSERT INTO users (username, password, enabled) VALUES ('admin', '$2a$10$0hEik.6j6X865afquVWLoOVF.kuFuZkPHS26kUR/8eY4fA2PI1pEK', '1');          -- user 5
 
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- 
+    Configure user roles
+----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+DELETE FROM users_roles;
+
+INSERT INTO users_roles (user_id, role_id) VALUES (1,1);
+INSERT INTO users_roles (user_id, role_id) VALUES (2,2);
+INSERT INTO users_roles (user_id, role_id) VALUES (3,3);
+INSERT INTO users_roles (user_id, role_id) VALUES (4,4);
