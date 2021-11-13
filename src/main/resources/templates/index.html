@@ -8,10 +8,10 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <body>
-  <div th:insert="fragments/header :: header"></div>
-  <div align="center">
-      <h2>Welcome User</h2>
-  </div>
-  <div th:insert="fragments/footer :: footer"></div>
-  </body>
-  </html>
+<div th:insert="fragments/header :: header"></div>
+<div align="center">
+		<h2>Welcome <b><span sec:authentication="name">Username</span></b></h2>
+</div>
+<div th:insert="fragments/footer :: footer"></div>
+</body>
+</html>
