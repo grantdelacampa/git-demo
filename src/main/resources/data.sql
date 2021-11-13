@@ -62,6 +62,15 @@ DELETE FROM users;
 INSERT INTO users (username, password, enabled) VALUES ('user', '$2a$10$LmoQpntTQx8EUGZrzaoddu4.2n9AVILShNGNWFGkzhR6mBLhdEPLm', '1');           -- user 1 
 INSERT INTO users (username, password, enabled) VALUES ('creator', '$2a$10$R3M4n97Picjqrx/aVVVprelsFzEE9kGBS/Pw0WYAozqPiU1cUHpP6', '1');        -- user 2
 INSERT INTO users (username, password, enabled) VALUES ('editor', '$2a$10$87FxFUSgID2kPyVMiqNdcuk31DAtw/G3l3tD6nAP9C0egD1vQ8R9i', '1');         -- user 3
-INSERT INTO users (username, password, enabled) VALUES ('creatoreditor', '$2a$10$IWymjeWUGO2BDXjj64SO/.4EM9BeLkqS6KKTu2qAH4IKL2gFsPBve', '1');  -- user 4
-INSERT INTO users (username, password, enabled) VALUES ('admin', '$2a$10$0hEik.6j6X865afquVWLoOVF.kuFuZkPHS26kUR/8eY4fA2PI1pEK', '1');          -- user 5
+INSERT INTO users (username, password, enabled) VALUES ('admin', '$2a$10$0hEik.6j6X865afquVWLoOVF.kuFuZkPHS26kUR/8eY4fA2PI1pEK', '1');          -- user 4
 
+/* ---------------------------------------------------------------------------------------------------------------------------------------------- 
+    Configure user roles
+----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+DELETE FROM users_roles;
+
+INSERT INTO users_roles (user_id, role_id) VALUES (1,1);
+INSERT INTO users_roles (user_id, role_id) VALUES (2,2);
+INSERT INTO users_roles (user_id, role_id) VALUES (3,3);
+INSERT INTO users_roles (user_id, role_id) VALUES (4,4);
