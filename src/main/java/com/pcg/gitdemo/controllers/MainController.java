@@ -13,4 +13,9 @@ public class MainController {
     public String loadHome() {
         return "index";
     }
+
+    @RequestMapping("/test")
+    public String loadTest(){
+        return "test";
+    }
 }

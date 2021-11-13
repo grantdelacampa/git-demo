@@ -10,7 +10,7 @@ Local execution:
     4) right click src/java/com/pcg/gitdemo/GitDemoApplicaiton.java and click 'run java'
     5) navigate to http://localhost:8080 in your browser.
 Docker execution:
-    1) If you habe changed the applicaiton.properties file make the following changes
+    1) If you have changed the applicaiton.properties file make the following changes
         - url=jdbc:mysql://db:3306/testdb1
             Note: the port should be the internal port of the mysql container
         - password=<password defined in docker-compose>
