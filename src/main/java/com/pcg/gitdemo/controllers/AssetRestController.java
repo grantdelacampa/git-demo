@@ -2,7 +2,6 @@ package com.pcg.gitdemo.controllers;
 
 import com.pcg.gitdemo.models.Asset;
 import com.pcg.gitdemo.services.AssetService;
-import com.pcg.gitdemo.services.ProductService;
 
 import lombok.RequiredArgsConstructor;
 
