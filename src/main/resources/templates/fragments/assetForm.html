@@ -1,0 +1,62 @@
+<! DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8"/>
+    </head>
+    <div th:fragment="assetForm">
+        <tr>
+            <td>Asset Name</td>
+            <td><input type="text" th:field="*{name}" maxlength="25"/></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><input type="text" th:field="*{description}" maxlength="200"/></td>
+        </tr>
+        <tr>
+            <td>Install Date</td>
+            <td><input type="date" th:field="*{installDate}"/></td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td><input type="number" th:field="*{price}" min="0.00" max="10000.00" step="0.01" /></td>
+        </tr>
+        <tr>
+            <td>Purchase Date</td>
+            <td><input type="date" th:field="*{purchaseDate}"/></td>
+        </tr>
+        <tr>
+            <td>Quantity</td>
+            <td><input type="number" th:field="*{quantity}"/></td>
+        </tr>
+        <tr>
+            <td>Serial Number</td>
+            <td><input type="text" th:field="*{serialNumber}" maxlength="30"/></td>
+        </tr>
+        <tr>
+            <td>SKU</td>
+            <td><input type="text" th:field="*{sku}" maxlength="25"/></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>
+                <select th:field="*{assetType}">
+                    <option th:value="'Digital'" th:text="Digital"></option>
+                    <option th:value="'Physical'" th:text="Physical"></option>
+                    <option th:value="'External'" th:text="External"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Status</td>
+            <td>
+                <select th:field="*{status}">
+                    <option th:value="'Purchased'" th:text="Purchased"></option>
+                    <option th:value="'Shipped'" th:text="Shipped"></option>
+                    <option th:value="'Installed'" th:text="Installed"></option>
+                    <option th:value="'Registered'" th:text="Registered"></option>
+                    <option th:value="'Obsolete'" th:text="Obsolete"></option>
+                </select>
+            </td>
+        </tr>
+    </div>          
+</html>         

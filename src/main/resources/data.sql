@@ -31,6 +31,24 @@ CREATE TABLE IF NOT EXISTS users_roles (
   CONSTRAINT `user_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE IF NOT EXISTS asset (
+  `asset_id` int NOT NULL AUTO_INCREMENT,
+  `description` varchar(200) NULL,
+  `name` varchar(20) NOT NULL,
+  `installDate` date NULL,
+  `price` decimal(6,2) NULL,
+  `purchaseDate` date NULL,
+  `quantity` int NULL,
+  `serialNumber` varchar(30) NULL,
+  `sku` varchar(25) NULL, 
+  `assetType` ENUM('Digital', 'Physical', 'External'),
+  `status` ENUM('Purchased', 'Shipped', 'Installed', 'Registered', 'Obsolete'),
+  /*
+  `ownerId` varchar(25) NOT NULL,*/
+
+  PRIMARY KEY(`asset_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 /* ---------------------------------------------------------------------------------------------------------------------------------------------- 
     Configure products
 ----------------------------------------------------------------------------------------------------------------------------------------------*/

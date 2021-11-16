@@ -1,16 +1,16 @@
 Dependencies:
     - Java SDK 11
     - MySQL
-    - Tomcat 8.5 (do not use tomcat 11)
+    - Tomcat 8.5 (do not use tomcat 10+)
     - Docker & Docker Compose
 Local execution:
     1) configure src/main/resoruces/application.properties to your database settings
     2) execute the script found in src/main/resources/data.sql
-    3) complie the applicaiton
+    3) compile the applicaiton
     4) right click src/java/com/pcg/gitdemo/GitDemoApplicaiton.java and click 'run java'
     5) navigate to http://localhost:8080 in your browser.
 Docker execution:
-    1) If you habe changed the applicaiton.properties file make the following changes
+    1) If you have changed the application.properties file make the following changes
         - url=jdbc:mysql://db:3306/testdb1
             Note: the port should be the internal port of the mysql container
         - password=<password defined in docker-compose>
@@ -22,6 +22,6 @@ Docker execution:
                 - git-demo-db-1     exposed on 3316
                 - git-demo-web-1    exposed on 8085
     4) To connect to the application navigate to 
-        - Http://localhost/demo/
+        - Http://localhost:8085/demo/
         -NOTE: the database will automatically be configured via the src/java/resources/data.sql
     5) To shut down docker and clean the containers run 'docker compose down -v'

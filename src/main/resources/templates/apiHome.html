@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="utf-8"/>
+<title>Employee Manager</title>
+ <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+<div th:insert="fragments/header :: header"></div>
+<div align="center">
+    <h1>API List</h1>
+    <br/>
+    <p>This demo provides functioning Rest calls to the following: </p>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+                <th scope = "col">Object</th>
+                <th scope = "col">GET</th>
+                <th scope = "col">POST</th>
+                <th scope = "col">PUT</th>
+                <th scope = "col">DELETE</th>
+                <th scope = "col">PATCH</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td th:text="Asset">User ID</td>
+                <td>/demo/api/v1/asset</td>
+                <td th:text="NA">POST URL</td>
+                <td th:text="NA">PUT URL</td>
+                <td th:text="NA">DELETE URL</td>
+                <td th:text="NA">PATCH URL</td>
+            </tr>
+            <tr>
+                <td th:text="User">User ID</td>
+                <td th:text="NA">Get URL</td>
+                <td th:text="NA">POST URL</td>
+                <td th:text="NA">PUT URL</td>
+                <td th:text="NA">DELETE URL</td>
+                <td th:text="NA">PATCH URL</td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+<div th:insert="fragments/footer :: footer"></div>
+</html>

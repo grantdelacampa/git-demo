@@ -1,0 +1,64 @@
+<! DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+<meta charset="utf-8"/>
+<title>Asset Manager</title>
+ <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+<div th:insert="fragments/header :: header"></div>
+<div align="center">
+    <h1>Asset List</h1>
+    <br/><br/>
+    <div th:if="${not #lists.isEmpty(listAssets)}">
+        <table class="table table-sm" >
+            <thead>
+                <tr>
+                    <th scope="col">Asset ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Install Date</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Purchase Date</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Serial Number</th>
+                    <th scope="col">SKU</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Status</th>
+                    <!--
+                    <th scope="col">Owner</th>
+                    -->
+                    <th scope="col" sec:authorize="hasAnyAuthority('EDITOR', 'CREATOR', 'ADMIN')">Modify</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="asset : ${listAssets}">
+                    <td th:text="${asset.id}">Asset ID</td>
+                    <td th:text="${asset.name}">Name</td>
+                    <td th:text="${asset.description}">Description</td>
+                    <td th:text="${asset.installDate}">Install Date</td>
+                    <td th:text="${asset.price}">Price</td>
+                    <td th:text="${asset.purchaseDate}">Purchase Date</td>
+                    <td th:text="${asset.quantity}">Quantity</td>
+                    <td th:text="${asset.serialNumber}">Serial Number</td>
+                    <td th:text="${asset.sku}">SKU</td>
+                    <td th:text="${asset.assetType}">Type</td>
+                    <td th:text="${asset.status}">Status</td>
+                    <td sec:authorize="hasAnyAuthority('EDITOR', 'CREATOR', 'ADMIN')">
+                        <!-- If path fails to map check brackets!!! --> 
+                        <a th:href="@{/asset/edit/{id} (id=${asset.id})}" sec:authorize="hasAnyAuthority('EDITOR', 'CREATOR', 'ADMIN')">Edit</a>
+                        <a th:href="@{/asset/delete/{id} (id=${asset.id})}" sec:authorize="hasAnyAuthority('ADMIN')">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div th:if="${#lists.isEmpty(listAssets)}">
+        <p>There are currently no Assets!</p>
+        <a th:href="@{/asset/new}" sec:authorize="hasAnyAuthority('USER', 'EDITOR', 'CREATOR', 'ADMIN')">Create Asset</a>
+    </div>
+</div>   
+</body>
+<div th:insert="fragments/footer :: footer"></div>
+</html>

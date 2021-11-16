@@ -1,6 +1,5 @@
 package com.pcg.gitdemo.config;
 
-import org.apache.tomcat.util.net.openssl.ciphers.Authentication;
 import org.springframework.context.annotation.*;
 import org.springframework.security.authentication.dao.*;
 import org.springframework.security.config.annotation.authentication.builders.*;
@@ -8,12 +7,7 @@ import org.springframework.security.config.annotation.web.builders.*;
 import org.springframework.security.config.annotation.web.configuration.*;
 import org.springframework.security.core.userdetails.*;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
-import java.io.IOException;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
 
 import com.pcg.gitdemo.services.UserDetailsServiceImpl;
  
