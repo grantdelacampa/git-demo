@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<title>Import CSV</title>
+ <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+</head>
+<body>
+<div th:insert="fragments/header :: header"></div>
+    <div align="center">
+        <h1>Asset Batch Upload Tool</h1>
+        <p th:text="${message}" th:if="${message ne null}" class="alert alert-primary"></p>
+        <p>To upload file ensure that the extension is ".csv" and the file is formatted correctly</p>
+         <form th:action="@{/asset/upload}" method="post" enctype="multipart/form-data">
+            <table border="0" cellpadding="10">    
+				<tr>
+					<td>
+						<div class="form-group">
+	                        <input type="file" name="file" accept=".csv" class="form-control-file">
+	                    </div>
+					</td>
+				</tr>
+                <tr>
+                    <td><button type="submit" class="btn btn-primary" disabled>Save</button> </td>
+                    <p>This feature is currently disabled</p>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+<div th:insert="fragments/footer :: footer"></div>
+</html>

@@ -1,7 +1,6 @@
 package com.pcg.gitdemo.models;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -10,7 +9,6 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.pcg.gitdemo.models.User;
 
 @SuppressWarnings("serial")
 public class MyUserDetails implements UserDetails {
