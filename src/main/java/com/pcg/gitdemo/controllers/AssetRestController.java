@@ -3,8 +3,6 @@ package com.pcg.gitdemo.controllers;
 import com.pcg.gitdemo.models.Asset;
 import com.pcg.gitdemo.services.AssetService;
 
-import lombok.RequiredArgsConstructor;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

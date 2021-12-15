@@ -39,13 +39,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         auth.authenticationProvider(authenticationProvider());
     }
  
+    //TODO: Add the .antMatchers for all URLS
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
     		.antMatchers("/").hasAnyAuthority("USER","CREATOR", "ADMIN", "EDITOR")
             .anyRequest().authenticated()
             .and()
-            .formLogin().permitAll()
+            .formLogin()
+            .permitAll()
             .and()
             .logout().permitAll()
             .and()

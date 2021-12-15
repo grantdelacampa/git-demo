@@ -18,7 +18,7 @@ services:
     # move the war build file from the local directory to the proper internal container directory 
     volumes:
       - ./target/demo.war:/usr/local/tomcat/webapps/demo.war
-      # expose the internal port 8080 via the external port 8085
+    # expose the internal port 8080 via the external port 8085
     ports: 
       - '8085:8080'
     environment:

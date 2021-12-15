@@ -52,6 +52,7 @@
     <div th:insert="fragments/header :: header"></div>
     <div align="center">
         <h2>Welcome <b><span sec:authentication="name">Username</span></b></h2>
+        <!--
         <div class="container"> 
             <div class="row"> 
                         <div class="card w-50">
@@ -68,7 +69,194 @@
                         </div>
                 </div>
             </div>
-    </div>
+    </div> -->
+    <div id="accordion">
+        <div class="card w-75">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+                <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                1) General Business Registration Forms
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <ul class="list-group">
+                <li class="list-group-item">X-1 Application For Reservation Of Name</li>
+                <li class="list-group-item">X-2 Transfer Of Name Reservation</li>
+                <li class="list-group-item">X-3 Correction</li>
+                <li class="list-group-item">X-4 Application for Reinstatement</li>
+                <li class="list-group-item">X-7 Statement of Change of Registed Agent by Entity</li>
+                <li class="list-group-item">X-8 Statement of Change of Non-Comercial Registed Agent's Business Address or Name</li>
+                <li class="list-group-item">X-9 Statement of Resignation of Registered Agent</li>
+                <li class="list-group-item">X-10 Articles of Conversion</li>
+                <li class="list-group-item">X-11 Commercial Registered Agent Listing Statement</li>
+                <li class="list-group-item">X-12 Articles of Merger</li>
+                <li class="list-group-item">X-13 Commercial Registered Agent Termination Statement</li>
+                <li class="list-group-item">X-14 Statement of Change by Commercial Registered Agent</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card w-75">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                2) Domestic Profit Coporation Forms
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <ul class="list-group">
+                <li class="list-group-item">Document One</li>
+                <li class="list-group-item">Document Two</li>
+                <li class="list-group-item">Document Three</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card w-75">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0 mx-4">
+              <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                3) Domestic Nonprofit Corporation Forms
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <ul class="list-group">
+                <li class="list-group-item">Document One</li>
+                <li class="list-group-item">Document Two</li>
+                <li class="list-group-item">Document Three</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card w-75">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0 mx-4">
+              <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                4) Foreign Profit & NonProfit Corporation Forms
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <ul class="list-group">
+                <li class="list-group-item">Document One</li>
+                <li class="list-group-item">Document Two</li>
+                <li class="list-group-item">Document Three</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card w-75">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0 mx-4">
+              <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                5) Domestic and Foreign General Partnership Forms
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <ul class="list-group">
+                <li class="list-group-item">Document One</li>
+                <li class="list-group-item">Document Two</li>
+                <li class="list-group-item">Document Three</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card w-75">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0 mx-4">
+              <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                6) Domestic Limited Partnership and Domestic Limited Liability Partnership Forms
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <ul class="list-group">
+                <li class="list-group-item">Document One</li>
+                <li class="list-group-item">Document Two</li>
+                <li class="list-group-item">Document Three</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card w-75">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0 mx-4">
+              <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                7) Foreign Limited Partnership and Foreign Limited Liability Partnership Forms
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <ul class="list-group">
+                <li class="list-group-item">Document One</li>
+                <li class="list-group-item">Document Two</li>
+                <li class="list-group-item">Document Three</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card w-75">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0 mx-4">
+              <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                8) Domestic Limited Liability Company Forms
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <ul class="list-group">
+                <li class="list-group-item">Document One</li>
+                <li class="list-group-item">Document Two</li>
+                <li class="list-group-item">Document Three</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card w-75">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0 mx-4">
+              <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                9) Foreign Limited Liability Company Forms
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <ul class="list-group">
+                <li class="list-group-item">Document One</li>
+                <li class="list-group-item">Document Two</li>
+                <li class="list-group-item">Document Three</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card w-75">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0 mx-4">
+              <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                10) Domestic and Foreign Limited Liability Partnership Forms
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <ul class="list-group">
+                <li class="list-group-item">Document One</li>
+                <li class="list-group-item">Document Two</li>
+                <li class="list-group-item">Document Three</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card w-75">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0 mx-4">
+              <button class="btn btn-link text-dark collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                11) Trade Registration Forms
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <ul class="list-group">
+                <li class="list-group-item">Document One</li>
+                <li class="list-group-item">Document Two</li>
+                <li class="list-group-item">Document Three</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     <div th:insert="fragments/footer :: footer"></div>
     </body>
 </body>
